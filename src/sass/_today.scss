@@ -1,0 +1,154 @@
+.weather-today-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    height: 300px;
+    border-radius: 34px 0px 0px 34px;
+    background: #102136;
+    /* shadow */
+    box-shadow: 0px 8px 43px 0px rgba(16, 33, 54, 0.60);
+    padding: 29px 0 36px;
+}
+
+.weather-today-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.weather-today-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.weather-today-country {
+    display: flex;
+    width: 100%;
+    height: 26px;
+    flex-direction: column;
+    justify-content: center;
+    color: #767D85;
+    text-align: center;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.weather-today {
+    display: flex;
+    width: 100%;
+    height: 96px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    margin-bottom: 16px;
+}
+
+.weather-today-list {
+    display: flex;
+    gap: 10px;
+  
+}
+
+.weather-today-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-today-line{
+    width: 0px;
+    height: 40px;
+}
+
+.weather-today-line svg {
+    width: 2px;
+    stroke-width: 1px;
+    stroke: #27384A;
+}
+
+.weather-today-range {
+    color: #767D85;
+    text-align: center;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.weather-today-temp {
+   color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+.choose-weather-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 92px;
+    margin-bottom: 65px;
+    position: absolute;
+    right: 0;
+}
+
+
+.choose-weather-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    
+}
+
+.choose-day-list {
+    display: flex;
+    gap: 18px;
+}
+
+.choose-day-btn {
+    display: flex;
+    width: 126px;
+    height: 27px;
+    padding: 0px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.50);
+    outline: none;
+    border: none;
+    color: #000;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+.choose-day-btn:hover {
+    background: #FFF;
+}   

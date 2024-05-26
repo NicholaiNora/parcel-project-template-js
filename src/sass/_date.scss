@@ -1,0 +1,141 @@
+.date-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 630px;
+    height: 278px;
+    border-radius: 0px 34px 0px 0px;
+    background: rgba(16, 33, 54, 0.60);
+    padding-left: 110px;
+    gap: 10px;
+}
+
+.date-day-span {
+    width: 100%;
+    height: 96px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 3.6px;
+}
+
+.month-time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.month-time-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.month-span {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.time-span {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.time-line-span {
+    width: 0px;
+    height: 22px;
+}
+
+.time-line-icon {
+    width: 2px;
+    height: 22px;
+    stroke-width: 1px;
+    stroke: #FFF;
+    opacity: 0.4;
+}
+
+
+.date-time-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.date-time-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-sun-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.date-sun-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.quotes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.quotes-paragraph {
+    width: 340px;
+    height: 80px;
+    color: #FFF;
+    text-align: right;
+    font-family: Lato;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.88px;
+}
+
+.quotes-person {
+    color: #FFF;
+    text-align: right;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}

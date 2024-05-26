@@ -1,0 +1,62 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+.container {
+    width: 1280px;
+    min-height: 954px;
+    background: green;
+    margin: 0 auto;
+    padding: 0 110px;
+    padding-top: 79px;
+    position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  min-height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
