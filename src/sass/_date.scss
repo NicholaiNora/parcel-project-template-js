@@ -49,6 +49,10 @@
 }
 
 .time-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 77px;
     color: #FFF;
     font-family: Lato;
     font-size: 18px;
@@ -118,7 +122,7 @@
 
 .quotes-paragraph {
     width: 340px;
-    height: 80px;
+    min-height: 80px;
     color: #FFF;
     text-align: right;
     font-family: Lato;
