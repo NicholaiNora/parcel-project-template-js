@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
-import {sunRiseTime, sunSetTime } from './date';
+import { sunRiseTime, sunSetTime, updateWeekName, updateMonthName, updateTimer } from './date';
 
 const searchInput = document.querySelector('.search-input');
 const searchForm = document.querySelector('.search-form');
@@ -18,6 +18,7 @@ async function getWeatherCondition(city) {
     let weatherData = await response.data; // Assigning the fetched data to the module-level variable
     console.log(weatherData);
     updateWeatherDisplay(weatherData);
+    updateTimezone(weatherData)
     updateSunTime(weatherData);
     searchForm.reset();
   } catch (error) {
@@ -25,6 +26,8 @@ async function getWeatherCondition(city) {
     Notiflix.Notify.failure("Can't fetch weather");
   }
 }
+
+getLocation();
 
 function updateWeatherDisplay(data) {
   location.innerText = `${data.name}, ${data.sys.country}`;
@@ -37,8 +40,22 @@ function updateWeatherDisplay(data) {
 function updateSunTime(data) {
   sunRiseTime(data);
   sunSetTime(data);
-  console.log(data.timezone);
 }
+
+function updateTimezone(data) {
+  const timezoneOffsetInSeconds = data.timezone;
+  const timezoneOffsetInMilliseconds = timezoneOffsetInSeconds * 1000;
+  const currentDate = new Date();
+  const localTime = new Date(
+    currentDate.getTime() + timezoneOffsetInMilliseconds
+  );  
+  updateWeekName(localTime);
+  updateMonthName(localTime);
+  updateTimer(localTime);
+}
+
+
+
 
 searchForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -47,3 +64,26 @@ searchForm.addEventListener('submit', e => {
     getWeatherCondition(city);
   }
 });
+
+function getLocation() {
+  if (navigator.geolocation) {
+   navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+   console.log('Geolocation is not supported by this browser.');
+  }
+}
+
+async function showPosition(position) {
+  const { latitude, longitude } = position.coords;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=c32df37628577b1447329bd64ef99bea&units=metric`;
+  try {
+    const response = await axios.get(url);
+    let positionData = await response.data; 
+    getWeatherCondition(positionData.name);
+  } catch (error) {
+    console.log(error);
+    Notiflix.Notify.failure("Can't fetch weather");
+  }
+}
+
+
